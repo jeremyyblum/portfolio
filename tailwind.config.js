@@ -16,6 +16,9 @@ module.exports = {
     },
   },
   plugins: [],
+  safelist: [
+    'animate-skillbar'
+  ]  
 }
 
 
