@@ -22,7 +22,7 @@
     @apply inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600  hover:scale-105 transition-all duration-200 ease-in-out;
   }
   .nav-link{
-    @apply text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-gray-100 transition;
+    @apply text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-gray-100 transition block py-2 md:py-0;
   }
   .sideinfo {
     @apply font-semibold text-blue-600 mb-1;
@@ -44,5 +44,8 @@
   }
   .skill-percentage {
     @apply text-sm text-gray-500 dark:text-gray-300;
+  }
+  .fadeIn {
+     @apply animate-fadeIn;
   }
 }

@@ -9,20 +9,55 @@
     <body class="bg-white text-gray-800 font-sans dark:bg-gray-900 dark:text-gray-100">
        
         <!--Navigation-->
-        <nav class="flex justify-between items-center p-6 shadow-md">
-            <h1 class="text-xl font-bold">Mein Portfolio</h1>
-                <div class="flex items-center">
-                    <ul class="hidden md:flex space-x-6">
-                        <li><a href="#" class="nav-link">Start</a></li>
-                        <li><a href="#" class="nav-link">Projekte</a></li>
-                        <li><a href="#" class="nav-link">Kontakt</a> </li>
-                    </ul>
-                    <button id="dark-toggle" class="ml-4 px-3 py-1 border dark:border-gray-900 rounded text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+        <nav class="bg-white dark:bg-gray-900 shadow-md">
+            <div class="max-w-6xl mx-auto p-6 flex items-center justify-between">  
+                           
+            <div class="flex items-center space-x-6">
+                <h1 class="text-xl font-bold">Mein Portfolio</h1>
+
+            <!-- Dekstop Navigation -->
+                <ul class="hidden md:flex space-x-6">
+                    <li><a href="#" class="nav-link">Start</a></li>
+                    <li><a href="#" class="nav-link">Projekte</a></li>
+                    <li><a href="#" class="nav-link">Kontakt</a></li>
+                </ul>
+            </div>
+            
+            <!-- Rechte Seite -->
+            <div class="flex items-center space-x-4">
+                <!-- Dark Mode Toggle -->
+                <button id="dark-toggle" class="hidden md:inline-block px-3 py-1 
+                                                border dark:border-gray-700 rounded text-sm 
+                                                hover:bg-gray-100 dark:hover:bg-gray-800 transition">
                     🌓
+                </button>
+        
+                <!-- Burger Button (nur mobil sichtbar) -->
+                    <button id="menu-toggle" class="text-2xl md:hidden focus:outline-none">
+                    ☰
                     </button>
                 </div>
+            </div>
         </nav>
         
+        <!-- Mobile Fullscreen Menu-->
+         <div id="mobile-overlay"
+            class="fixed inset-0 bg-white dark:bg-gray-900 flex flex-col 
+            items-center justify-center space-y-8 text-2xl font-semibold hidden z-50">
+
+            <!-- Close Button -->
+                <button id="close-overlay" class="absolute top-6 right-6 text-3xl hover:text-blue-500 transition">
+                ✖
+                </button>
+            <a href="#" class="nav-link">Start</a>
+            <a href="#" class="nav-link">Projekte</a>
+            <a href="#" class="nav-link">Kontakt</a>
+            <!-- Optional: Dark Mode-->
+             <button id="dark-toggle-mobile" class="text-base border px-3 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+                🌓 Dark Mode
+             </button>
+        </div>
+
         <!--Hero Section-->
         <section class="flex flex-col md:flex-row items-center justify-between px-8 py-20 max-w-6xl mx-auto">
             <div class="md:w-1/2 mb-10 md:mb-0">
