@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>TEST</title>
+            <link rel="stylesheet" href="../dist/output.css">
+        </head>
+    <body class="bg-white text-gray-800 font-sans dark:bg-gray-900 dark:text-gray-100">
+       
+        <!--Navigation-->
+        <nav class="flex justify-between items-center p-6 shadow-md">
+            <h1 class="text-xl font-bold">Mein Portfolio</h1>
+                <div class="flex items-center">
+                    <ul class="hidden md:flex space-x-6">
+                        <li><a href="#" class="nav-link">Starttttt</a></li>
+                        <li><a href="#" class="nav-link">Projekte</a></li>
+                        <li><a href="#" class="nav-link">Kontakt</a> </li>
+                    </ul>
+                    <button id="dark-toggle" class="ml-4 px-3 py-1 border dark:border-gray-900 rounded text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+                    🌓
+                    </button>
+                </div>
+        </nav>
+        
+        <!--Hero Section-->
+        <section class="flex flex-col md:flex-row items-center justify-between px-8 py-20 max-w-6xl mx-auto">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h2 class="text-4xl font-bold mb-4">Hi, ich bin Jeremy Blum 👋</h2>
+                <p class="text-lg text-gray-600 dark:text-gray-400">
+                    Ich baue schöne, moderne Websites und lerne gerade Tailwind CSS, JavaScript und React.
+                </p>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="images/ProfileJeremy.png" alt="Jeremy's Image" class="w-40 md:w-60 lg:w-72 h-auto rounded-full shadow-lg">
+            </div>
+        </section>
+
+        <!--Projects Section-->
+        <section class="bg-gray-100 dark:bg-gray-800 py-16">
+            <div class="max-w-6xl mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12">Meine Projekte</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!--Project 1 -->
+                <div class="card">
+                    <img src="images/image.png" alt="Projekt 1" class="card-img">
+                    <div class="card-body">
+                        <h3 class="card-title">Intensive Care</h3>
+                        <p class="card-text">Webpage für Intensive Care Heimbeatmung</p>
+                        <a href="#" class="card-btn">Mehr erfahren</a>
+                    </div>
+                </div>
+                
+                <!--Project 2 -->
+                <div class="card">
+                    <img src="images/Nocte_Logo_Purple.png" alt="Projekt 2" class="card-img">
+                    <div class="card-body">
+                        <h3 class="card-title">NOCTE</h3>
+                        <p class="card-text">Online Magazinshop</p>
+                        <a href="#" class="card-btn">Mehr erfahren</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Über mich Section-->
+        <section class="py-20 bg-white dark:bg-gray-900">
+            <div class="max-w-4xl mx-auto px-6 text-center">
+                 <!-- Text -->
+                    <h2 class="text-3xl font-bold mb-6">Über mich</h2>
+                    <p class="text-gray-700 dark:text-gray-400 text-lg leading-relaxed mb-8">
+                        Hi! Ich bin Jeremy, angehender Webentwickler mit Fokus auf moderne, responsive Webseiten.
+                        Ich liebe es, mit HTML, Tailwind CSS und bald auch React interaktive Oberflächen zu bauen.
+                        Nebenbei interessiere ich mich für Design, Tech-Trends und kreative Projekte.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-left">
+                        <div>
+                            <h3 class="sideinfo">📍 Standort</h3>
+                            <p> Deutschland (remote & flexibel)</p>
+                        </div>
+                        <div>
+                            <h3 class="sideinfo">💻 Tech-Stack</h3>
+                            <p>HTML, CSS, JavaScript, React</p>
+                        </div>
+                        <div>
+                            <h3 class="sideinfo">🎯 Ziel</h3>
+                            <p>Modernes, cleanes Portfolio & stetiges Lernen</p>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+        </section>
+
+        <!--Skills mit Balken-->
+        <section class="py-20 bg-white dark:bg-gray-800">
+            <div class="max-w-3xl mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12">Meine Skills</h2>
+
+                <!-- SKill: HTML-->
+                 <div class="skill-body">
+                    <div class="skill-description">
+                        <span class="skill-title">HTML</span>
+                        <span class="skill-percentage">90%</span>
+                    </div>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar skill-fill" style="--target-width: 90%"></div>
+                    </div>
+                 </div>
+
+                <!-- Skill: CSS-->
+                 <div class="skill-body">
+                    <div class="skill-description">
+                        <span class="skill-title">CSS</span>
+                        <span class="skill-percentage">80%</span>
+                    </div>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar skill-fill" style="--target-width: 80%"></div>
+                    </div>
+                </div>
+                
+                <!-- Skill: JavaScript -->
+                 <div class="skill-body">
+                    <div class="skill-description">
+                        <span class="skill-title">JavaScript</span>
+                        <span class="skill-percentage">40%</span>
+                    </div>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar skill-fill" style="--target-width: 40%"></div>
+                    </div>
+                </div>
+                <!-- Skill: React -->
+                 <div class="skill-body">
+                    <div class="skill-description">
+                        <span class="skill-title">React</span>
+                        <span class="skill-percentage">0%</span>
+                    </div>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar skill-fill" style="--target-width: 0%"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script>
+            const observer = new IntersectionObserver((entries) => {
+              entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add('animate-skillbar');
+                  observer.unobserve(entry.target); // nur einmal animieren
+                }
+              });
+            }, {
+              threshold: 0.5 // sobald 50 % sichtbar sind
+            });
+          
+            document.querySelectorAll('.skill-fill').forEach(el => {
+              observer.observe(el);
+            });
+          </script>
+          <script>
+            const toggle = document.getElementById('dark-toggle');
+            toggle.addEventListener('click', () => {
+              document.documentElement.classList.toggle('dark');
+            });
+          </script>
+    </body>
+</html>
