@@ -5,7 +5,7 @@ VERSION=$(date +"v%Y.%m.%d-%H%M")
 echo "📦 Starte Deployment: $VERSION"
 
 # === Versionsnummer in version.js schreiben ===
-echo "document.getElementById('version').textContent = '$VERSION';" > docs/version.js
+echo "document.getElementById('version').textContent = '$VERSION';" > docs/scripts/version.js
 
 # === Tailwind CSS Build ===
 echo "🎨 Baue Tailwind-CSS..."
