@@ -142,27 +142,13 @@
                 </div>
             </div>
         </section>
-        <script>
-            const observer = new IntersectionObserver((entries) => {
-              entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                  entry.target.classList.add('animate-skillbar');
-                  observer.unobserve(entry.target); // nur einmal animieren
-                }
-              });
-            }, {
-              threshold: 0.5 // sobald 50 % sichtbar sind
-            });
-          
-            document.querySelectorAll('.skill-fill').forEach(el => {
-              observer.observe(el);
-            });
-          </script>
-          <script>
-            const toggle = document.getElementById('dark-toggle');
-            toggle.addEventListener('click', () => {
-              document.documentElement.classList.toggle('dark');
-            });
-          </script>
+
+        <!-- Footer -->
+        <footer class="text-center text-sm py-6 text-gray-500 dark:text-gray-400 border-t border-gray-200 dark:border-gray-700 mt-10 mb-4">
+            <p>
+                © <span id="year"></span> Jeremy Blum • Version <span id="version"></span>
+            </p>
+          </footer>
+        <script src="scripts/main.js"></script>
     </body>
 </html>
