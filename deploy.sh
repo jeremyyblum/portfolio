@@ -19,6 +19,6 @@ git push || { echo "❌ Fehler beim Pushen"; exit 1; }
 
 # === Done ===
 echo "✅ Deployment abgeschlossen!"
-echo "🌍 Live: https://jeremyyblum.github.io/Jeremys-Portfolio/"
+echo "🌍 Live: https://jeremyyblum.github.io/portfolio/"
 echo "🔖 Version: $VERSION"
 
