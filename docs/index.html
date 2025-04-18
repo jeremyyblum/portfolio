@@ -88,7 +88,7 @@
                     </div>
                 </div>
                 
-                <!--Project 2 -->
+                <!--Project 2 / NOCTE -->
                 <div class="card">
                     <img src="images/Nocte_Logo_Purple.png" alt="Projekt 2" class="card-img">
                     <div class="card-body">
@@ -96,7 +96,7 @@
                         <p class="card-text">Online Magazinshop 
                         <br /> Privates Projekt 
                         </p>
-                        <a href="#" class="card-btn">Mehr erfahren</a>
+                        <a role="button" id="open-nocte-modal" class="card-btn">Mehr erfahren</a>
                     </div>
                 </div>
 
@@ -192,6 +192,35 @@
             </div>
         </section>
 
+
+        <!-- Test-Modal -->
+            <div id="test-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+                <div id="test-modal-content" class="bg-white p-6 rounded-lg shadow-lg max-w-sm w-full transition-all duration-300 scale-95 opacity-0">
+                <button id="test-modal-close" class="absolute top-4 right-4 text-xl">✖</button>
+                <h3 class="text-xl font-bold mb-4">Test Modal</h3>
+                <p class="text-gray-700">Hallo! Das ist ein funktionierendes Modal.</p>
+                </div>
+            </div>
+            
+            <!-- Test-Button -->
+            <button id="test-modal-open" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition mt-8 block mx-auto">
+                Modal öffnen
+            </button>
+  
+            <!-- NOCTE Modal -->
+
+            <div id="nocte-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+                <div id="nocte-modal-content" class="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-lg max-w-lg w-full transition-all duration-300 scale-95 opacity-0">
+                  <button id="close-nocte-modal" class="absolute top-3 right-3 text-2xl text-gray-500 hover:text-red-500 transition">✖</button>
+                  <h3 class="text-2xl font-bold mb-4">NOCTE – Online Magazinshop</h3>
+                  <p class="text-gray-700 dark:text-gray-300 mb-4">
+                    NOCTE ist ein Online-Konzept für einen Magazinshop, das ich als privates Projekt entwickelt habe.
+                  </p>
+                  <img src="images/Nocte_Logo_Purple.png" alt="NOCTE" class="w-48 mx-auto mb-4 rounded-lg" />
+                  <a href="#" class="inline-block mt-2 text-blue-500 hover:underline">Zur Projektseite (zukünftig)</a>
+                </div>
+              </div>
+
         <!-- Footer -->
         <footer class="text-center py-6 text-sm text-gray-500 dark:text-gray-400 border-t border-gray-200 dark:border-gray-700 mt-12">
             <div class="flex justify-center space-x-6 mb-4">
@@ -236,7 +265,7 @@
           
 
         <!-- Scripts -->
-        <script src="scripts/main.js"></script>
+        <script defer src="scripts/main.js"></script>
         <script src="scripts/version.js"></script>
     </body>
 </html>

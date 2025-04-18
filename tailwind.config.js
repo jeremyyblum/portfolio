@@ -22,7 +22,10 @@ module.exports = {
   },
   plugins: [],
   safelist: [
-    'animate-skillbar'
+    'animate-skillbar',
+    'open',
+    'modal-content',
+    'modal-content.open',
   ]  
 }
 

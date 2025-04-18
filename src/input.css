@@ -4,7 +4,7 @@
 
 @layer components {
   .card {
-    @apply bg-white dark:bg-gray-900 rounded-lg shadow-md overflow-hidden hover:scale-105 transition-transform duration-300 hover:shadow-xl;
+    @apply bg-white dark:bg-gray-900 rounded-xl shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300 hover:shadow-xl;
   }
   .card-img {
     @apply w-full h-48 object-cover transition-transform duration-300 hover:scale-110;
@@ -19,7 +19,7 @@
     @apply text-gray-600 dark:text-gray-300 mb-4;
   }
   .card-btn {
-    @apply inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600  hover:scale-105 transition-all duration-200 ease-in-out;
+    @apply cursor-pointer inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 text-sm font-medium hover:scale-105 transition-all duration-200 ease-in-out;
   }
   .nav-link{
     @apply text-gray-600 hover:text-gray-950 dark:text-gray-300 dark:hover:text-gray-100 transition block py-2 md:py-0;
@@ -51,4 +51,30 @@
   .footer-link {
     @apply hover:text-blue-500 transition;
   }
+  .modal {
+    @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 transition-opacity duration-300 hidden;
+  }
+  
+  .modal-content {
+    @apply bg-white dark:bg-gray-900 p-6 rounded-lg shadow-lg max-w-lg w-full relative transition-all duration-300 scale-95 opacity-0;
+  }
+  
+  .modal-open {
+    @apply scale-100 opacity-100;
+  }
+  
+  
+  .modal-title {
+    @apply text-2xl font-bold mb-4;
+  }
+  .modal-text {
+    @apply text-gray-700 dark:text-gray-300 mb-4;
+  }
+  .modal-close {
+    @apply absolute top-3 right-3 text-2xl text-gray-500 hover:text-red-500 transition;
+  }
+  .modal-link {
+    @apply inline-block mt-2 text-blue-500 hover:underline
+  }
+
 }
