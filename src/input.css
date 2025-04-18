@@ -48,4 +48,7 @@
   .fadeIn {
      @apply animate-fadeIn;
   }
+  .footer-link {
+    @apply hover:text-blue-500 transition;
+  }
 }
