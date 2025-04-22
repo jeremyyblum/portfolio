@@ -51,41 +51,50 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("year").textContent = new Date().getFullYear();
 
   
-  // === NOCTE Modal ===
-  const nocteModal = document.getElementById('nocte-modal');
-const openNocteModal = document.getElementById('open-nocte-modal');
-const closeNocteModal = document.getElementById('close-nocte-modal');
-const nocteModalContent = document.getElementById('nocte-modal-content');
+// === Universelles Modal-System ===
+const modal = document.getElementById('modal');
+const modalContent = document.getElementById('modal-content');
+const modalBody = document.getElementById('modal-body');
+const modalClose = document.getElementById('modal-close');
 
-if (nocteModal && openNocteModal && closeNocteModal && nocteModalContent) {
-  openNocteModal.addEventListener('click', (e) => {
+document.querySelectorAll('.open-modal').forEach(button => {
+  button.addEventListener('click', (e) => {
     e.preventDefault();
-    nocteModal.classList.remove('hidden');
+
+    const title = button.dataset.title || 'Kein Titel';
+    const text = button.dataset.text || '';
+    const img = button.dataset.img || '';
+
+    modalBody.innerHTML = `
+      <h3 class="text-2xl font-bold mb-4">${title}</h3>
+      <p class="text-gray-700 dark:text-gray-300 mb-4">${text}</p>
+      ${img ? `<img src="${img}" alt="${title}" class="w-48 mx-auto mb-4 rounded-lg">` : ''}
+    `;
+
+    modal.classList.remove('hidden');
     document.body.classList.add('overflow-hidden');
+
     setTimeout(() => {
-      nocteModalContent.classList.add('scale-100', 'opacity-100');
-      nocteModalContent.classList.remove('scale-95', 'opacity-0');
-    }, 10);
+      modalContent.classList.add('modal-open');
+      modalContent.classList.remove('scale-95', 'opacity-0');
+    }, 10); 
   });
+});
 
-  const closeModal = () => {
-    nocteModalContent.classList.remove('scale-100', 'opacity-100');
-    nocteModalContent.classList.add('scale-95', 'opacity-0');
-    setTimeout(() => {
-      nocteModal.classList.add('hidden');
-      document.body.classList.remove('overflow-hidden');
-    }, 300);
-  };
+const closeModal = () => {
+  modalContent.classList.remove('modal-open');
+  modalContent.classList.add('scale-95', 'opacity-0');
+  setTimeout(() => {
+    modal.classList.add('hidden');
+    document.body.classList.remove('overflow-hidden');
+    modalBody.innerHTML = '';
+  }, 300);
+};
 
-  closeNocteModal.addEventListener('click', closeModal);
-  nocteModal.addEventListener('click', (e) => {
-    if (e.target === nocteModal) {
-      closeModal();
-    }
-  });
-}
-
-  
+modalClose.addEventListener('click', closeModal);
+modal.addEventListener('click', (e) => {
+  if (e.target === modal) closeModal();
+});
 
 });
 

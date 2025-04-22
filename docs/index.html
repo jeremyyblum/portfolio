@@ -84,7 +84,13 @@
                     <div class="card-body">
                         <h3 class="card-title">Intensive Care</h3>
                         <p class="card-text">Webpage für Intensive Care Heimbeatmung</p>
-                        <a href="#" class="card-btn">Mehr erfahren</a>
+                        <a href="#" class="card-btn open-modal"
+                           data-title="Intensive Care Heimbeatmung"
+                           data-text="Privates Projekt, welches mich dazu antrieb Webdesign zu erlernen, 
+                           wenn die Seite mal fertig ist, steht im Raum diese offiziell zu Launchen"
+                           data-img="images/intensive_care.png">
+                           Mehr erfahren
+                        </a>
                     </div>
                 </div>
                 
@@ -96,7 +102,15 @@
                         <p class="card-text">Online Magazinshop 
                         <br /> Privates Projekt 
                         </p>
-                        <a role="button" id="open-nocte-modal" class="card-btn">Mehr erfahren</a>
+                        <a role="button" class="card-btn open-modal"
+                           data-title="NOCTE"
+                           data-text="NOCTE ist ein Online-Konzept für einen Magazinshop, das ich als privates Projekt entwickelt habe. 
+                           Es soll eine moderne Oberfläche bieten, die es den Nutzern ermöglicht, Magazine zu entdecken und zu kaufen.
+                           Das Design ist inspiriert von aktuellen Trends in der Webentwicklung und legt Wert auf Benutzerfreundlichkeit und Ästhetik.
+                           Dieses Modemagazin soll sowohl Frauen als auch Männer ansprechen und sie für die Welt der Mode und des Designs begeistern."
+                           data-img="images/Nocte_Logo_Purple.png">
+                           Mehr erfahren
+                        </a>
                     </div>
                 </div>
 
@@ -106,7 +120,16 @@
                     <div class="card-body">
                         <h3 class="card-title">Seaborn vs Matplotlib</h3>
                         <p class="card-text">Wissenschaftliche Arbeit / Vergleich von Seaborn und Matplotlib</p>
-                        <a href="#" class="card-btn">Mehr erfahren</a>
+                        <a href="#" class="card-btn open-modal"
+                           data-title="Seaborn vs Matplotlib"
+                           data-text="In Rahmen meines dualen Studiums habe ich die beiden Python-Bibliotheken Seaborn und Matplotlib untersucht.
+                           Ziel war es, die Vor- und Nachteile beider Bibliotheken zu vergleichen und herauszufinden, welche für verschiedene Anwendungsfälle besser geeignet ist.
+                           Die Arbeit umfasst eine detaillierte Analyse der Funktionen, der Benutzerfreundlichkeit und der Visualisierungsmöglichkeiten beider Bibliotheken.
+                           Ich habe auch einige praktische Beispiele erstellt, um die Unterschiede in der Anwendung zu verdeutlichen.
+                           Diese Arbeit hat mir geholfen, ein tieferes Verständnis für Datenvisualisierung in Python zu entwickeln und die Stärken und Schwächen der beiden Bibliotheken zu erkennen."
+                           data-img="images/seaborn_vs_matplotlib.png">
+                           Mehr erfahren
+                        </a>
                     </div>
                 </div>
             </div>
@@ -192,55 +215,37 @@
             </div>
         </section>
 
-
-        <!-- NOCTE Modal -->
-
-            <div id="nocte-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
-                <div id="nocte-modal-content" class="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-lg max-w-lg w-full transition-all duration-300 scale-95 opacity-0">
-                  <button id="close-nocte-modal" class="absolute top-3 right-3 text-2xl text-gray-500 hover:text-red-500 transition">✖</button>
-                  <h3 class="text-2xl font-bold mb-4">NOCTE – Online Magazinshop</h3>
-                  <p class="text-gray-700 dark:text-gray-300 mb-4">
-                    NOCTE ist ein Online-Konzept für einen Magazinshop, das ich als privates Projekt entwickelt habe.
-                  </p>
-                  <img src="images/Nocte_Logo_Purple.png" alt="NOCTE" class="w-48 mx-auto mb-4 rounded-lg" />
-                  <a href="#" class="inline-block mt-2 text-blue-500 hover:underline">Zur Projektseite (zukünftig)</a>
+            <!-- Uni-Modal -->
+             <div id="modal" class="modal hidden">
+                <div id="modal-content" class="modal-content">
+                    <button id="modal-close" class="modal-close">✖</button>
+                    <div id="modal-body">
+                        <!-- JS Filling -->
+                    </div>
                 </div>
-              </div>
+            </div>
 
         <!-- Footer -->
         <footer class="text-center py-6 text-sm text-gray-500 dark:text-gray-400 border-t border-gray-200 dark:border-gray-700 mt-12">
             <div class="flex justify-center space-x-6 mb-4">
               <!-- GitHub -->
-              <a href="https://github.com/jeremyyblum" target="_blank"
-                class="hover:text-blue-500 transition" aria-label="GitHub">
-                <svg class="w-5 h-5 inline text-gray-700 dark:text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+              <a href="https://github.com/jeremyyblum" target="_blank" aria-label="GitHub">
+                <svg class="footer-icon" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.5 7.9 11c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5c-.6-1.5-1.5-1.9-1.5-1.9c-1.2-.8.1-.8.1-.8c1.3.1 2 1.3 2 1.3c1.2 2 3.1 1.5 3.9 1.1c.1-.9.5-1.5.9-1.8c-2.5-.3-5.2-1.3-5.2-5.8c0-1.3.5-2.3 1.2-3.1c-.1-.3-.5-1.6.1-3.3c0 0 1-.3 3.2 1.2c.9-.2 1.8-.3 2.7-.3s1.8.1 2.7.3c2.2-1.5 3.2-1.2 3.2-1.2c.6 1.7.2 3 .1 3.3c.8.8 1.2 1.8 1.2 3.1c0 4.6-2.7 5.5-5.2 5.8c.5.4.9 1.2.9 2.4v3.5c0 .3.2.7.8.6c4.6-1.5 7.9-5.9 7.9-11C23.5 5.7 18.3.5 12 .5z"/>
                 </svg>
             </a>
-
-              
-          
               <!-- Mail -->
-              <!-- Mail Icon (neu als SVG) -->
-            <a href="mailto:jeremyblum.jb@gmail.com"
-                class="hover:text-blue-500 transition" aria-label="E-Mail">
-                <svg class="w-5 h-5 inline text-gray-700 dark:text-gray-300" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M4 4h16v16H4z" fill="none"/>
-                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 
-                        1.1.89 2 1.99 2H20c1.1 0 2-.9 
-                        2-2V6c0-1.1-.9-2-2-2zm0 
-                        4l-8 5-8-5V6l8 5 8-5v2z"/>
+            <a href="mailto:jeremyblum.jb@gmail.com" target="_blank" aria-label="E-Mail">
+                <svg class="footer-icon" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.89 2 1.99 2H20c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                 </svg>
             </a>
-
-          
               <!-- LinkedIn (optional) -->
-              <a href="https://www.linkedin.com/in/deinprofil/" target="_blank" class="hover:text-blue-600 dark:hover:text-blue-400 transition" aria-label="LinkedIn">
-                <svg class="w-5 h-5 inline text-blue-600 dark:text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+              <a href="https://www.linkedin.com/in/deinprofil/" target="_blank" aria-label="LinkedIn">
+                <svg class="footer-icon" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M4.98 3.5C3.34 3.5 2 4.84 2 6.5S3.34 9.5 4.98 9.5 8 8.16 8 6.5 6.62 3.5 4.98 3.5zM2 21h6V9H2v12zm7 0h6v-6.5c0-3.59-4-3.32-4 0V21h6v-7.2c0-5.66-6-5.44-6 0V21z"/>
                 </svg>
               </a>
-              
             </div>
           
             <!-- Jahr & Version -->

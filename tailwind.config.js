@@ -25,7 +25,7 @@ module.exports = {
     'animate-skillbar',
     'open',
     'modal-content',
-    'modal-content.open',
+    'modal-open',
   ]  
 }
 

@@ -52,18 +52,17 @@
     @apply hover:text-blue-500 transition;
   }
   .modal {
-    @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 transition-opacity duration-300 hidden;
+    @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 transition-opacity duration-300;
   }
-  
   .modal-content {
     @apply bg-white dark:bg-gray-900 p-6 rounded-lg shadow-lg max-w-lg w-full relative transition-all duration-300 scale-95 opacity-0;
   }
-  
   .modal-open {
     @apply scale-100 opacity-100;
   }
-  
-  
+  .footer-icon {
+    @apply w-5 h-5 inline text-gray-700 dark:text-gray-300 hover:text-blue-500 transition dark:hover:text-blue-400;
+  }
   .modal-title {
     @apply text-2xl font-bold mb-4;
   }
