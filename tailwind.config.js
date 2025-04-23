@@ -26,6 +26,15 @@ module.exports = {
     'open',
     'modal-content',
     'modal-open',
+    'modal-open',
+    'w-48',
+    'mx-auto',
+    'mb-4',
+    'rounded-lg',
+    'text-2xl',
+    'font-bold',
+    'text-gray-700',
+    'dark:text-gray-300'
   ]  
 }
 
